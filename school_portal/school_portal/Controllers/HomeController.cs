@@ -8,9 +8,10 @@ namespace school_portal.Controllers
 {
     public class HomeController : Controller
     {
+        PortalContext db = new PortalContext();
         public ActionResult Index()
         {
-            return View();
+            return View(db.Users);
         }
 
         public ActionResult About()
